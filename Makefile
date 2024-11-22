@@ -1,6 +1,6 @@
 # Define the image name
 IMAGE_NAME = chris_app
-DOCKER_ID_USER = U1186204
+DOCKER_ID_USER = u1186204
 
 # Build the Docker image
 build:
@@ -22,7 +22,7 @@ container_show:
 
 push:
 	docker login
-	docker tag $(IMAGE_NAME) $(DOCKER_ID_USER)/$(IMAGE_NAME)
+	docker tag $(IMAGE_NAME) $(DOCKER_ID_USER)/$(IMAGE_NAME):latest
 	docker push $(DOCKER_ID_USER)/$(IMAGE_NAME):latest
 
 login:

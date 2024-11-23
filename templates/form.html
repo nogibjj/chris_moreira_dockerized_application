@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report a Defect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        input, select, textarea, button {
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Report a Defect</h1>
+        <form method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="employeeID">Employee ID:</label>
+            <input type="text" id="employeeID" name="employeeID" placeholder="Enter your Employee ID" required>
+
+            <label for="partNumber">Select a Part Number:</label>
+            <select id="partNumber" name="partNumber" required>
+                <option value="" disabled selected>Choose a part</option>
+                {% for part in parts %}
+                <option value="{{ part }}">{{ part }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="defect">Report the Defect:</label>
+            <select id="defect" name="defect" required onchange="showPrompt()">
+                <option value="" disabled selected>Choose a defect</option>
+                {% for defect in defects %}
+                <option value="{{ defect }}">{{ defect }}</option>
+                {% endfor %}
+            </select>
+
+            <div id="additionalDetailsContainer" style="display: none;">
+                <label for="additionalDetails">Please specify:</label>
+                <textarea id="additionalDetails" name="additionalDetails" placeholder="Enter additional details"></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function showPrompt() {
+            const defectSelect = document.getElementById("defect");
+            const additionalDetailsContainer = document.getElementById("additionalDetailsContainer");
+            if (defectSelect.value === "Something else") {
+                additionalDetailsContainer.style.display = "block";
+            } else {
+                additionalDetailsContainer.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

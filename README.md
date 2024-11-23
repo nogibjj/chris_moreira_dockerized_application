@@ -7,9 +7,9 @@ This project demonstrates the functionality of Python Flask as a lightweight web
 ![image](https://github.com/user-attachments/assets/e04f14c0-3aa3-4b45-a502-92154456b546)
 ![image](https://github.com/user-attachments/assets/29f8bec8-dde2-4445-9e00-3f1a69fd8e06)
 # Tools
-**Docker Hub**: Used to containerize the Flask application, enabling seamless sharing and deployment. The app's Docker image is built locally and pushed to Docker Hub, allowing others to easily pull and run it.
-**Flask**: Serves as the core framework for building the web application, managing user input through a dynamic form and displaying a confirmation message upon submission.
-**HTML**: Defines the structure and visual layout of the user interface, including input fields, dropdown menus, and the submit button, ensuring an interactive and user-friendly experience.
+- **Docker Hub**: Used to containerize the Flask application, enabling seamless sharing and deployment. The app's Docker image is built locally and pushed to Docker Hub, allowing others to easily pull and run it.
+- **Flask**: Serves as the core framework for building the web application, managing user input through a dynamic form and displaying a confirmation message upon submission.
+- **HTML**: Defines the structure and visual layout of the user interface, including input fields, dropdown menus, and the submit button, ensuring an interactive and user-friendly experience.
 
 # Project File Structure
 ```css

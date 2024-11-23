@@ -3,6 +3,8 @@
 # Project Purpose
 This project demonstrates the functionality of Python Flask as a lightweight web framework and its integration with front-end development in a Dockerized environment. The application serves as a simple tool for reporting defective parts, allowing users to fill out a form with their name, employee ID, selected part, and the cause of the defect. If the user selects "Something else" as the defect cause, they are prompted to provide additional details. While this project is not yet connected to a database or cloud application, it focuses on creating a front-end user interface. The app leverages Docker Hub to containerize and distribute the application, making it portable and easy to run. The structure and layout of the app are defined in the form.html file located in the templates folder.
 
+# Link to Docker Image
+http://127.0.0.1:5000/
 # Take a look at the app
 ![image](https://github.com/user-attachments/assets/e04f14c0-3aa3-4b45-a502-92154456b546)
 ![image](https://github.com/user-attachments/assets/29f8bec8-dde2-4445-9e00-3f1a69fd8e06)
